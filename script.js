@@ -11,14 +11,22 @@ let fontSize = document.querySelector(".FontSizeText")
 
 // Change text in textArea 
 for (let i = 0; i < inp.length; i++) {
+    cssText();
     inp[i].value = 0;
     inp[i].addEventListener("input", function() {
-        textArea.innerText = `color: ${color.value};`
-        textArea.innerText = `background: ${bg.value};`
-        textArea.innerText = `FontSize: ${fontSize.value};`
-        result.style.color = color.value;
-        result.style.background = bg.value;
-        result.style.fontSize = fontSize.value / 1.25 + "px";
-
+        cssText();
+        resultText();
     })
+}
+//Function of text
+function cssText() {
+    let cssCode = `color: ${color.value};`;
+    cssCode += `background: ${bg.value};`;
+    cssCode += `font-size: ${fontSize.value}px;`;
+    textArea.innerText = cssCode;
+}
+function resultText() {
+    result.style.color = color.value;
+    result.style.background = bg.value;
+    result.style.fontSize = fontSize.value / 1.25 + "px";
 }
