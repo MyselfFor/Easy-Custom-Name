@@ -61,23 +61,23 @@ border.addEventListener('change', function() {
     resultText();
 });
 
-// let num1, num2;
+let num1, num2;
 
-// while (true) {
-//   let input1 = prompt("Enter the first number");
-//   let input2 = prompt("Enter the degree of number");
+while (true) {
+  let input1 = prompt("Enter the first number");
+  let input2 = prompt("Enter the degree of number");
 
-//   num1 = parseFloat(input1);
-//   num2 = parseFloat(input2);
+  num1 = parseFloat(input1);
+  num2 = parseFloat(input2);
 
-//   if (!isNaN(num1) && !isNaN(num2)) {
-//     break;
-//   } else {
-//     alert("Please enter valid numbers for both inputs");
-//   }
-// }
+  if (!isNaN(num1) && !isNaN(num2)) {
+    break;
+  } else {
+    alert("Please enter valid numbers for both inputs");
+  }
+}
 
-// alert(`You entered valid numbers: ${num1**num2}`);
+alert(`You entered valid numbers: ${num1**num2}`);
 
 
 
