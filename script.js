@@ -26,13 +26,14 @@ function cssText() {
     let cssCode = `color: ${color.value};`;
     cssCode += `background: ${bg.value};`;
     cssCode += `font-size: ${fontSize.value}px;`;
+    cssCode += `border: ${"solid black 2"}px;`;
     textArea.innerText = cssCode;
 }
 
 // Function to hide the text of result
 function resultText() {
     result.style.color = color.value;
-    result.style.background = backgroundCheckbox.checked ? "none" : bg.value;
+    result.style.background = backgroundCheckbox.checked ? bg.value : "none" ;
     result.style.fontSize = fontSize.value / 1.25 + "px";
     result.style.border = border.checked ? "solid black 2px": "none";
 }
@@ -46,3 +47,20 @@ border.addEventListener('change', function() {
     resultText();
 });
 
+let num1, num2;
+
+while (true) {
+  let input1 = prompt("Enter the first number");
+  let input2 = prompt("Enter the degree of number");
+
+  num1 = parseFloat(input1);
+  num2 = parseFloat(input2);
+
+  if (!isNaN(num1) && !isNaN(num2)) {
+    break;
+  } else {
+    alert("Please enter valid numbers for both inputs");
+  }
+}
+
+alert(`You entered valid numbers: ${num1**num2}`);
