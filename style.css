@@ -1,3 +1,4 @@
+
 .container {
     width: 1300px;
     height: 800px;
@@ -7,7 +8,7 @@
 }
 .settings {
     width: 270px;
-    height: 160px;
+    height: 210px;
     background: #a72828;
     position: absolute;
     top: 60px;
@@ -25,15 +26,14 @@
     width: 400px;
     height: 200px;
     background: #279bbe;
-    position: relative;
+    position: absolute;
     top:150px;
     left: 800px;
 }
 .result h1{
-    color: #c4d623;
-    background: #614d4d;
-    font-size: 20px;
-    text-align: center;
+    color: #000000;
+    background: #000000;
+    font-size: 0px;
     position: absolute;
     left: 43%;
     top: 33%;
@@ -53,4 +53,13 @@ input {
     position: absolute;
     top:11px;
     left: 27px;
+}
+.changeBG {
+    position: absolute;
+    left: 30px;
+}
+.bgEnable {
+    position: absolute;
+    top: -15px;
+    font-family: "Rubik", sans-serif;
 }
