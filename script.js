@@ -37,10 +37,11 @@ function resultText() {
     result.style.border = border.checked ? "solid black 2px": "none";
 }
 
-// Event listener for background checkbox hide
+// Event listener for background checkbox 
 backgroundCheckbox.addEventListener('change', function() {
     resultText();
 });
+// Event listener for border checkbox 
 border.addEventListener('change', function() {
     resultText();
 });
