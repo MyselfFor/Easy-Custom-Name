@@ -10,10 +10,10 @@ let bg = document.querySelector(".textBG");
 let fontSize = document.querySelector(".FontSizeText");
 let backgroundCheckbox = document.querySelector(".changeBG");
 let border = document.querySelector(".borderCheck")
+let colorBorder = document.querySelector(".colorBorder")
 
 // Change text in textArea
-for (let i = 0; i < 3; i++) {
-    cssText();
+for (let i = 0; i < inp.length; i++) {
     inp[i].value = 0;
     inp[i].addEventListener("input", function() {
         cssText();
@@ -21,23 +21,37 @@ for (let i = 0; i < 3; i++) {
     });
 }
 
+// Add a separate event listener for fontSize
+fontSize.addEventListener("input", function() {
+    cssText();
+    resultText();
+});
 // Function to update CSS text
 function cssText() {
     let cssCode = `color: ${color.value};`;
-    cssCode += `background: ${bg.value};`;
+
+    if (backgroundCheckbox.checked) {
+        cssCode += `background: ${bg.value};`;
+    } else {
+        cssCode += `background: none;`;
+    }
+
+    if (border.checked) {
+        cssCode += `border: solid ${colorBorder.value} 2px;`;
+    } else {
+        cssCode += `border: none;`;
+    }
+
     cssCode += `font-size: ${fontSize.value}px;`;
-    cssCode += `border: ${"solid black 2"}px;`;
     textArea.innerText = cssCode;
 }
-
 // Function to hide the text of result
 function resultText() {
     result.style.color = color.value;
-    result.style.background = backgroundCheckbox.checked ? bg.value : "none" ;
+    result.style.background = backgroundCheckbox.checked ? bg.value : "none";
     result.style.fontSize = fontSize.value / 1.25 + "px";
-    result.style.border = border.checked ? "solid black 2px": "none";
+    result.style.border = border.checked ? `solid ${colorBorder.value} 2px` : "none";
 }
-
 // Event listener for background checkbox 
 backgroundCheckbox.addEventListener('change', function() {
     resultText();
@@ -47,20 +61,23 @@ border.addEventListener('change', function() {
     resultText();
 });
 
-let num1, num2;
+// let num1, num2;
 
-while (true) {
-  let input1 = prompt("Enter the first number");
-  let input2 = prompt("Enter the degree of number");
+// while (true) {
+//   let input1 = prompt("Enter the first number");
+//   let input2 = prompt("Enter the degree of number");
 
-  num1 = parseFloat(input1);
-  num2 = parseFloat(input2);
+//   num1 = parseFloat(input1);
+//   num2 = parseFloat(input2);
 
-  if (!isNaN(num1) && !isNaN(num2)) {
-    break;
-  } else {
-    alert("Please enter valid numbers for both inputs");
-  }
-}
+//   if (!isNaN(num1) && !isNaN(num2)) {
+//     break;
+//   } else {
+//     alert("Please enter valid numbers for both inputs");
+//   }
+// }
 
-alert(`You entered valid numbers: ${num1**num2}`);
+// alert(`You entered valid numbers: ${num1**num2}`);
+
+
+
