@@ -41,7 +41,7 @@ function resultText() {
 backgroundCheckbox.addEventListener('change', function() {
     resultText();
 });
-// Event listener for border checkbox 
+// Event listener for border checkbox
 border.addEventListener('change', function() {
     resultText();
 });
