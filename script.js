@@ -1,16 +1,16 @@
 // Select Elements
-let inp = document.querySelectorAll("input");
 let content = document.querySelector(".container");
 let textArea = document.querySelector("#codeText");
 let result = document.querySelector(".resultText");
 
 // Select Inputs
+let inp = document.querySelectorAll("input");
 let color = document.querySelector(".colorText");
 let bg = document.querySelector(".textBG");
 let fontSize = document.querySelector(".FontSizeText");
 let backgroundCheckbox = document.querySelector(".changeBG");
-let border = document.querySelector(".borderCheck")
-let colorBorder = document.querySelector(".colorBorder")
+let border = document.querySelector(".borderCheck");
+let colorBorder = document.querySelector(".colorBorder");
 
 // Change text in textArea
 for (let i = 0; i < inp.length; i++) {
@@ -42,10 +42,10 @@ function cssText() {
         cssCode += `border: none;`;
     }
 
-    cssCode += `font-size: ${fontSize.value}px;`;
+    cssCode += `font-size: ${fontSize.value / 1.25}px;`;
     textArea.innerText = cssCode;
 }
-// Function to hide the text of result
+// Function to change the text of result
 function resultText() {
     result.style.color = color.value;
     result.style.background = backgroundCheckbox.checked ? bg.value : "none";
@@ -61,11 +61,18 @@ border.addEventListener('change', function() {
     resultText();
 });
 
+
+
+
+
+
+
+// Basick mathematical power function
 let num1, num2;
 
 while (true) {
   let input1 = prompt("Enter the first number");
-  let input2 = prompt("Enter the degree of number");
+  let input2 = prompt("Enter the degree for number");
 
   num1 = parseFloat(input1);
   num2 = parseFloat(input2);
@@ -78,6 +85,3 @@ while (true) {
 }
 
 alert(`You entered valid numbers: ${num1**num2}`);
-
-
-

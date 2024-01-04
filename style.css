@@ -34,9 +34,7 @@
     color: #000000;
     background: #000000;
     font-size: 0px;
-    position: absolute;
-    left: 43%;
-    top: 33%;
+    border: none;
 }
 h1 {
     display:inline-block;
