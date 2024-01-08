@@ -21,11 +21,6 @@ for (let i = 0; i < inp.length; i++) {
     });
 }
 
-// Add a separate event listener for fontSize
-fontSize.addEventListener("input", function() {
-    cssText();
-    resultText();
-});
 // Function to update CSS text
 function cssText() {
     let cssCode = `color: ${color.value};`;
@@ -60,7 +55,10 @@ backgroundCheckbox.addEventListener('change', function() {
 border.addEventListener('change', function() {
     resultText();
 });
-
+// Add a separate event listener for fontSize
+fontSize.addEventListener("change", function() {
+    resultText();
+});
 
 
 
@@ -68,20 +66,20 @@ border.addEventListener('change', function() {
 
 
 // Basick mathematical power function
-let num1, num2;
+// let num1, num2;
 
-while (true) {
-  let input1 = prompt("Enter the first number");
-  let input2 = prompt("Enter the degree for number");
+// while (true) {
+//   let input1 = prompt("Enter the first number");
+//   let input2 = prompt("Enter the degree for number");
 
-  num1 = parseFloat(input1);
-  num2 = parseFloat(input2);
+//   num1 = parseFloat(input1);
+//   num2 = parseFloat(input2);
 
-  if (!isNaN(num1) && !isNaN(num2)) {
-    break;
-  } else {
-    alert("Please enter valid numbers for both inputs");
-  }
-}
+//   if (!isNaN(num1) && !isNaN(num2)) {
+//     break;
+//   } else {
+//     alert("Please enter valid numbers for both inputs");
+//   }
+// }
 
-alert(`You entered valid numbers: ${num1**num2}`);
+// alert(`You entered valid numbers: ${num1**num2}`);
