@@ -2,6 +2,8 @@
 let content = document.querySelector(".container");
 let textArea = document.querySelector("#codeText");
 let result = document.querySelector(".resultText");
+let fontFamily = document.querySelector("select");
+
 
 // Select Inputs
 let inp = document.querySelectorAll("input");
@@ -18,6 +20,7 @@ for (let i = 0; i < inp.length; i++) {
     inp[i].addEventListener("input", function() {
         cssText();
         resultText();
+        console.log(fontFamily.value)
     });
 }
 
@@ -35,6 +38,14 @@ function cssText() {
         cssCode += `border: solid ${colorBorder.value} 2px;`;
     } else {
         cssCode += `border: none;`;
+    }
+
+    if (fontFamily.value == "RubikFont") {
+        cssCode += `font-family: "Rubik", sans-serif;`;
+    } else if (fontFamily.value == "ScriptFont") {
+        cssCode += `font-family: "Dancing Script, cursive;`;
+    } else if (fontFamily.value == "PlexMonoFont") {
+        cssCode += `font-family: "IBM Plex Mono, monospace;`;
     }
 
     cssCode += `font-size: ${fontSize.value / 1.25}px;`;
@@ -59,8 +70,24 @@ border.addEventListener('change', function() {
 fontSize.addEventListener("change", function() {
     resultText();
 });
+fontFamily.addEventListener("change", function() {
+    cssText();
+    switch (fontFamily.value) {
+        case "PlexMonoFont":
+            result.style.fontFamily = "IBM Plex Mono, monospace";
+            break;
+        case "ScriptFont":
+            result.style.fontFamily = "Dancing Script, cursive";
+            break;
+        case "RubikFont":
+            result.style.fontFamily = "Rubik, sans-serif";
+            break;
+    }
+});
 
-
+// while (true) {
+//     console.log(fontFamily.value)
+// }
 
 
 
