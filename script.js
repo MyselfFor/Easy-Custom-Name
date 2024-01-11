@@ -13,14 +13,14 @@ let fontSize = document.querySelector(".FontSizeText");
 let backgroundCheckbox = document.querySelector(".changeBG");
 let border = document.querySelector(".borderCheck");
 let colorBorder = document.querySelector(".colorBorder");
+let borderSize = document.querySelector(".borderSize")
 
-// Change text in textArea
+// Change text
 for (let i = 0; i < inp.length; i++) {
     inp[i].value = 0;
     inp[i].addEventListener("input", function() {
         cssText();
         resultText();
-        console.log(fontFamily.value)
     });
 }
 
@@ -35,7 +35,7 @@ function cssText() {
     }
 
     if (border.checked) {
-        cssCode += `border: solid ${colorBorder.value} 2px;`;
+        cssCode += `border: solid ${colorBorder.value} ${borderSize.value}px;`;
     } else {
         cssCode += `border: none;`;
     }
@@ -56,20 +56,9 @@ function resultText() {
     result.style.color = color.value;
     result.style.background = backgroundCheckbox.checked ? bg.value : "none";
     result.style.fontSize = fontSize.value / 1.25 + "px";
-    result.style.border = border.checked ? `solid ${colorBorder.value} 2px` : "none";
+    result.style.border = border.checked ? `solid ${colorBorder.value} ${borderSize.value}px` : "none";
 }
-// Event listener for background checkbox 
-backgroundCheckbox.addEventListener('change', function() {
-    resultText();
-});
-// Event listener for border checkbox
-border.addEventListener('change', function() {
-    resultText();
-});
-// Add a separate event listener for fontSize
-fontSize.addEventListener("change", function() {
-    resultText();
-});
+
 fontFamily.addEventListener("change", function() {
     cssText();
     switch (fontFamily.value) {
@@ -84,12 +73,7 @@ fontFamily.addEventListener("change", function() {
             break;
     }
 });
-
-// while (true) {
-//     console.log(fontFamily.value)
-// }
-
-
+console.log(inp)
 
 
 // Basick mathematical power function

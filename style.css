@@ -71,3 +71,8 @@ input {
     left: 80px;
     top: 158px;
 }
+.borderSize {
+    position: absolute;
+    bottom: 69px;
+    width: 20px;
+}
