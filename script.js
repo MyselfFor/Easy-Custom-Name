@@ -73,7 +73,6 @@ fontFamily.addEventListener("change", function() {
             break;
     }
 });
-console.log(inp)
 
 
 // Basick mathematical power function
