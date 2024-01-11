@@ -3,6 +3,7 @@ let content = document.querySelector(".container");
 let textArea = document.querySelector("#codeText");
 let result = document.querySelector(".resultText");
 let fontFamily = document.querySelector("select");
+let textShadow = document.querySelector(".textShadowSetting")
 
 
 // Select Inputs
@@ -73,8 +74,15 @@ fontFamily.addEventListener("change", function() {
             break;
     }
 });
-
-
+let createDiv;
+textShadow.addEventListener("click", function() {
+    let createDiv = document.createElement("div");
+    createDiv.classList.add("textShadowScreen")
+    textShadow.append(createDiv)
+})
+textShadow.addEventListener("dblclick", function() {
+    createDiv.remove();
+})
 // Basick mathematical power function
 // let num1, num2;
 
