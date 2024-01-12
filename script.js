@@ -74,15 +74,21 @@ fontFamily.addEventListener("change", function() {
             break;
     }
 });
-let createDiv;
+
 textShadow.addEventListener("click", function() {
     let createDiv = document.createElement("div");
-    createDiv.classList.add("textShadowScreen")
-    textShadow.append(createDiv)
+    createDiv.classList.add("textShadowScreen");
+    textShadow.append(createDiv);
+    let Shiftright = document.createElement("input");
+    Shiftright.type = "range";
+    Shiftright.classList.add("inp");
+    textShadow.append(Shiftright);
+    textShadow.addEventListener("dblclick", function() {
+        createDiv.remove();
+        Shiftright.remove();
+    })
 })
-textShadow.addEventListener("dblclick", function() {
-    createDiv.remove();
-})
+
 // Basick mathematical power function
 // let num1, num2;
 

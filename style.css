@@ -98,3 +98,6 @@ input {
     left: 209px;
     top: 60px;
 }
+.inp {
+    position: absolute;
+}
