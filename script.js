@@ -70,7 +70,7 @@ fontFamily.addEventListener("change", function() {
             result.style.fontFamily = "Dancing Script, cursive";
             break;
         case "RubikFont":
-            result.style.fontFamily = "Rubik, sans-serif";
+            result.style.fontFamily = "Rubik, sans-serif";  
             break;
     }
 });
@@ -79,14 +79,22 @@ textShadow.addEventListener("click", function() {
     let createDiv = document.createElement("div");
     createDiv.classList.add("textShadowScreen");
     textShadow.append(createDiv);
-    let Shiftright = document.createElement("input");
-    Shiftright.type = "range";
-    Shiftright.classList.add("inp");
-    textShadow.append(Shiftright);
-    textShadow.addEventListener("dblclick", function() {
-        createDiv.remove();
-        Shiftright.remove();
-    })
+    for(let i = 0; i < 4; i++) {
+        let Shiftright = document.createElement("input");
+        Shiftright.type = "range";
+        Shiftright.classList.add("inp");
+        textShadow.append(Shiftright);
+    }
+    let allInp = document.querySelectorAll(".inp")
+    for(let i = 0; i < allInp.length; i++) {    
+        allInp[i].classList.remove("inp")
+        allInp[i].classList.add("shadowSetting" + i)
+        console.log(allInp)
+        textShadow.addEventListener("dblclick", function() {
+            createDiv.remove();
+            allInp[i].remove();
+        })
+    }  
 })
 
 // Basick mathematical power function
