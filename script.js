@@ -74,44 +74,25 @@ fontFamily.addEventListener("change", function() {
             break;  
     }
 });
-
-textShadow.addEventListener("click", function() {
-    let createDiv = document.createElement("div");
-    createDiv.classList.add("textShadowScreen");
-    textShadow.append(createDiv);
-    for(let i = 0; i < 4; i++) {
-        let Shiftright = document.createElement("input");
-        Shiftright.type = "range";
-        Shiftright.classList.add("inp");
-        textShadow.append(Shiftright);
-    }
-    let allInp = document.querySelectorAll(".inp")
-    for(let i = 0; i < allInp.length; i++) {    
-        allInp[i].classList.remove("inp")
-        allInp[i].classList.add("shadowSetting" + i)
-            console.log(allInp)
-            textShadow.addEventListener("dblclick", function() {
-                createDiv.remove();
-            allInp[i].remove();
-        })
-    }  
-})
-
-// Basick mathematical power function
-// let num1, num2;
-
-// while (true) {
-//   let input1 = prompt("Enter the first number");
-//   let input2 = prompt("Enter the degree for number");
-
-//   num1 = parseFloat(input1);
-//   num2 = parseFloat(input2);
-
-//   if (!isNaN(num1) && !isNaN(num2)) {
-//     break;
-//   } else {
-//     alert("Please enter valid numbers for both inputs");
-//   }
-// }
-
-// alert(`You entered valid numbers: ${num1**num2}`);
+// Maybe soon :)
+// textShadow.addEventListener("click", function() {
+//     let createDiv = document.createElement("div");
+//     createDiv.classList.add("textShadowScreen");
+//     textShadow.append(createDiv);
+//     for(let i = 0; i < 4; i++) {
+//         let Shiftright = document.createElement("input");
+//         Shiftright.type = "range";
+//         Shiftright.classList.add("inp");
+//         textShadow.append(Shiftright);
+//     }
+//     let allInp = document.querySelectorAll(".inp")
+//     for(let i = 0; i < allInp.length; i++) {    
+//         allInp[i].classList.remove("inp")
+//         allInp[i].classList.add("shadowSetting" + i)
+//             console.log(allInp)
+//             textShadow.addEventListener("dblclick", function() {
+//                 createDiv.remove();
+//             allInp[i].remove();
+//         })
+//     }  
+// })
