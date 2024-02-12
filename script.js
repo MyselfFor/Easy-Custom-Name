@@ -71,7 +71,7 @@ fontFamily.addEventListener("change", function() {
             break;
         case "RubikFont":
             result.style.fontFamily = "Rubik, sans-serif";  
-            break;
+            break;  
     }
 });
 
@@ -89,9 +89,9 @@ textShadow.addEventListener("click", function() {
     for(let i = 0; i < allInp.length; i++) {    
         allInp[i].classList.remove("inp")
         allInp[i].classList.add("shadowSetting" + i)
-        console.log(allInp)
-        textShadow.addEventListener("dblclick", function() {
-            createDiv.remove();
+            console.log(allInp)
+            textShadow.addEventListener("dblclick", function() {
+                createDiv.remove();
             allInp[i].remove();
         })
     }  
