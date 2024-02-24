@@ -1,4 +1,6 @@
+
 # Basic customization text with pure js
+
 > [!NOTE]
 > This my first work where i use most part js(now not css) in project.
 
