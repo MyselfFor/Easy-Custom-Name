@@ -74,3 +74,4 @@ fontFamily.addEventListener("change", function() {
             break;  
     }
 });
+// And it finally all ended, I be happy if someone saw my suffering :)
