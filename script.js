@@ -59,7 +59,7 @@ function resultText() {
     result.style.fontSize = fontSize.value / 1.25 + "px";
     result.style.border = border.checked ? `solid ${colorBorder.value} ${borderSize.value}px` : "none";
 }
-
+// Select font for text
 fontFamily.addEventListener("change", function() {
     cssText();
     switch (fontFamily.value) {
@@ -74,25 +74,3 @@ fontFamily.addEventListener("change", function() {
             break;  
     }
 });
-// Maybe soon :)
-// textShadow.addEventListener("click", function() {
-//     let createDiv = document.createElement("div");
-//     createDiv.classList.add("textShadowScreen");
-//     textShadow.append(createDiv);
-//     for(let i = 0; i < 4; i++) {
-//         let Shiftright = document.createElement("input");
-//         Shiftright.type = "range";
-//         Shiftright.classList.add("inp");
-//         textShadow.append(Shiftright);
-//     }
-//     let allInp = document.querySelectorAll(".inp")
-//     for(let i = 0; i < allInp.length; i++) {    
-//         allInp[i].classList.remove("inp")
-//         allInp[i].classList.add("shadowSetting" + i)
-//             console.log(allInp)
-//             textShadow.addEventListener("dblclick", function() {
-//                 createDiv.remove();
-//             allInp[i].remove();
-//         })
-//     }  
-// })
